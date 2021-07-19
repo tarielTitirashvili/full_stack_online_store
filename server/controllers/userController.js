@@ -41,7 +41,7 @@ class UserController {
     } 
     async auth(req, res, next){
         const token = generateToken(req.user.id, req.user.email, req.user.role)
-        res.json({token})
+        return res.json({token})
     }
 }
 
